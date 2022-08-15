@@ -5,12 +5,13 @@ package main
 import (
 	"context"
 	"flag"
-	"github.com/buptczq/WinCryptSSHAgent/capi"
 	"os"
 	"os/signal"
 	"path/filepath"
 	"sync"
 	"time"
+
+	"github.com/buptczq/WinCryptSSHAgent/capi"
 
 	"github.com/Microsoft/go-winio"
 	"github.com/buptczq/WinCryptSSHAgent/app"

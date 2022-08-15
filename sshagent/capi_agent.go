@@ -5,12 +5,13 @@ import (
 	"crypto/rand"
 	"errors"
 	"fmt"
+	"os"
+	"sync"
+
 	"github.com/buptczq/WinCryptSSHAgent/capi"
 	"github.com/buptczq/WinCryptSSHAgent/utils"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
-	"os"
-	"sync"
 )
 
 type sshKey struct {
@@ -111,8 +112,8 @@ func (s *CAPIAgent) Sign(key ssh.PublicKey, data []byte) (*ssh.Signature, error)
 
 func (s *CAPIAgent) signed(comment string) {
 	utils.Notify(
-		"Authenticated",
-		"Authentication Success by Certificate <"+comment+">",
+		"Success",
+		"For Certificate <"+comment+">",
 	)
 }
 
