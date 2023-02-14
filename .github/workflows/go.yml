@@ -16,6 +16,9 @@ jobs:
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+      
+    - name: Get goversioninfo
+      run: go get github.com/josephspurrier/goversioninfo/cmd/goversioninfo
 
     - name: Install goversioninfo
       run: go install github.com/josephspurrier/goversioninfo/cmd/goversioninfo
