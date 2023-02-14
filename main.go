@@ -1,6 +1,6 @@
 package main
 
-go:generate goversioninfo -icon=assets/icon.ico
+//go:generate goversioninfo -icon=assets/icon.ico
 
 import (
 	"context"
